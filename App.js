@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+
 
 import React, {Component} from 'react';
 import {StyleSheet,
@@ -14,17 +8,14 @@ import {StyleSheet,
       View } from 'react-native';
 
 export default class App extends Component {
-
     //Json parsing
     state={
       data: []
     };
 
-
     componentWillMount(){
       this.fetchData();
     }
-
 
     fetchData = async ()=>{
       const response = await 
@@ -44,6 +35,10 @@ export default class App extends Component {
   render() {
     return (
       <View  style={styles.container}>  
+        <View>
+            
+
+          </View>
 
        <FlatList
           data={this.state.data}
