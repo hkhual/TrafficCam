@@ -5,41 +5,48 @@ import {StyleSheet,
      Text,
      Image,
      FlatList,
-      View } from 'react-native';
+      View,
+      TouchableOpacity } from 'react-native';
 
 export default class App extends Component {
     //Json parsing
-    state={
-      data: []
-    };
+//     state={
+//       data: []
+//     };
 
-    componentWillMount(){
-      this.fetchData();
-    }
+//     componentWillMount(){
+//       this.fetchData();
+//     }
 
-    fetchData = async ()=>{
-      const response = await 
-      fetch('https://web6.seattle.gov/Travelers/api/Map/Data?zoomId=18&type=2');
-    const json = await response.json();
-    this.setState({data: json.Features});
-  };
+//     fetchData = async ()=>{
+//       const response = await 
+//       fetch('https://web6.seattle.gov/Travelers/api/Map/Data?zoomId=18&type=2');
+//     const json = await response.json();
+//     this.setState({data: json.Features});
+//   };
 
-  cameraType(camera){
-    if(camera.Type == 'sdot'){
-      return  "http://www.seattle.gov/trafficcams/images/"+camera.ImageUrl;
-    }else{
-          return "http://images.wsdot.wa.gov/nw/"+camera.ImageUrl;
-    }
-}
+//   cameraType(camera){
+//     if(camera.Type == 'sdot'){
+//       return  "http://www.seattle.gov/trafficcams/images/"+camera.ImageUrl;
+//     }else{
+//           return "http://images.wsdot.wa.gov/nw/"+camera.ImageUrl;
+//     }
+// }
 
   render() {
     return (
       <View  style={styles.container}>  
-        <View>
-            
+        
+            <Text style = {styles.header}>
+                  <Text style={styles.headTitle}>
+                  Seattle Traffic
+                </Text>
+            </Text>
+         
 
-          </View>
 
+
+{/* 
        <FlatList
           data={this.state.data}
           // x is the object and i is the index
@@ -57,7 +64,8 @@ export default class App extends Component {
 
             </View>
           }
-         />
+         /> */}
+         
       </View>
     );
   }
@@ -66,11 +74,23 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
       flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
+      //justifyContent: 'center',
+      //alignItems: 'center',
       backgroundColor: '#F5FCFF',
       
       
+  },
+  header:{
+    borderWidth: 2,
+    backgroundColor: '#1A97DA',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+
+  headTitle:{
+    color: 'white',
+    fontSize: 25,
+    justifyContent: 'center',
   },
  
   textView: {
