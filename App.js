@@ -6,47 +6,41 @@ import {StyleSheet,
      Image,
      FlatList,
       View,
-      TouchableOpacity } from 'react-native';
+      } from 'react-native';
 
 export default class App extends Component {
     //Json parsing
-//     state={
-//       data: []
-//     };
+    state={
+      data: []
+    };
 
-//     componentWillMount(){
-//       this.fetchData();
-//     }
+    componentWillMount(){
+      this.fetchData();
+    }
 
-//     fetchData = async ()=>{
-//       const response = await 
-//       fetch('https://web6.seattle.gov/Travelers/api/Map/Data?zoomId=18&type=2');
-//     const json = await response.json();
-//     this.setState({data: json.Features});
-//   };
+    fetchData = async ()=>{
+      const response = await 
+      fetch('https://web6.seattle.gov/Travelers/api/Map/Data?zoomId=18&type=2');
+    const json = await response.json();
+    this.setState({data: json.Features});
+  };
 
-//   cameraType(camera){
-//     if(camera.Type == 'sdot'){
-//       return  "http://www.seattle.gov/trafficcams/images/"+camera.ImageUrl;
-//     }else{
-//           return "http://images.wsdot.wa.gov/nw/"+camera.ImageUrl;
-//     }
-// }
+  cameraType(camera){
+    if(camera.Type == 'sdot'){
+      return  "http://www.seattle.gov/trafficcams/images/"+camera.ImageUrl;
+    }else{
+          return "http://images.wsdot.wa.gov/nw/"+camera.ImageUrl;
+    }
+}
 
   render() {
     return (
       <View  style={styles.container}>  
         
             <Text style = {styles.header}>
-                  <Text style={styles.headTitle}>
-                  Seattle Traffic
-                </Text>
+                  Seattle Traffic Camera
             </Text>
-         
-
-
-
-{/* 
+ {
        <FlatList
           data={this.state.data}
           // x is the object and i is the index
@@ -64,7 +58,8 @@ export default class App extends Component {
 
             </View>
           }
-         /> */}
+         /> 
+         }
          
       </View>
     );
@@ -85,12 +80,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#1A97DA',
     paddingTop: 10,
     paddingBottom: 10,
-  },
-
-  headTitle:{
-    color: 'white',
+    textAlign: 'center',
     fontSize: 25,
-    justifyContent: 'center',
+    color: 'white',
   },
  
   textView: {
