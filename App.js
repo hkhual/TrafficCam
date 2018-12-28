@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
     color: 'white',
-    paddingTop: Platform.OS === 'ios' ? 10: 15,
+    paddingTop: Platform.OS === 'ios' ? 10: 20,
     paddingTop: Platform.OS === 'android' ? 10: 80,
 
   },
