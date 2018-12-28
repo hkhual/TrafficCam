@@ -6,6 +6,8 @@ import {StyleSheet,
      Image,
      FlatList,
       View,
+      Platform,
+
       } from 'react-native';
 
 export default class App extends Component {
@@ -72,8 +74,7 @@ const styles = StyleSheet.create({
       //justifyContent: 'center',
       //alignItems: 'center',
       backgroundColor: '#F5FCFF',
-      
-      
+  
   },
   header:{
     borderWidth: 2,
@@ -83,8 +84,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
     color: 'white',
+    paddingTop: Platform.OS === 'ios' ? 10: 15,
+    paddingTop: Platform.OS === 'android' ? 10: 80,
+
   },
- 
+
   textView: {
     width: '60%',
     textAlignVertical: 'center',
