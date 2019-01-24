@@ -1,7 +1,11 @@
 # TrafficCam
   Sample React Native App for viewing Seattle Traffic Camera.  
+  
+  
 
-  <img src="images/Seattle_Traffic_Cam_Android.gif" width="224px">
+  Android            |  iOS
+:-------------------------:|:-------------------------:
+ <img src="images/Seattle_Traffic_Cam_Android.gif" width="224px">| <img src="images/Seattle_Traffic_Cam_ios.gif" width="224px">
 
 ## Installation
 
