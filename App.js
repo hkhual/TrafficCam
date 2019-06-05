@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' ? 10: 80,
 
   },
-
   textView: {
     width: '60%',
     textAlignVertical: 'center',
@@ -97,12 +96,10 @@ const styles = StyleSheet.create({
       fontSize: 15,
       color: 'red',
   },
-
   imageView: {
     width: '60%',
     height: '100%',
     margin: 7,
     borderRadius: 7,
   },
-
 });
