@@ -36,9 +36,12 @@ export default class App extends Component {
   render() {
     return (
       <View  style={styles.container}>  
+        <View>
             <Text style = {styles.header}>
                   Seattle Traffic Camera
             </Text>
+          </View>
+     
  {
        <FlatList
           data={this.state.data}
