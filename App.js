@@ -1,5 +1,3 @@
-
-
 import React, {Component} from 'react';
 import {StyleSheet,
      Text,
@@ -7,8 +5,8 @@ import {StyleSheet,
      FlatList,
       View,
       Platform,
-
       } from 'react-native';
+
 
 export default class App extends Component {
     //Json parsing
@@ -38,7 +36,6 @@ export default class App extends Component {
   render() {
     return (
       <View  style={styles.container}>  
-        
             <Text style = {styles.header}>
                   Seattle Traffic Camera
             </Text>
